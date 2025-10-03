@@ -24,6 +24,7 @@ public class CubeSpawnCordinator : MonoBehaviour
 
     private void CubeTouchPlatform(Cube cube)
     {
+        cube.HasTouchPlatform -= CubeTouchPlatform;
         _timerLife.StartTimer(() => _poolCube.ReturnCube(cube));
     }
 }

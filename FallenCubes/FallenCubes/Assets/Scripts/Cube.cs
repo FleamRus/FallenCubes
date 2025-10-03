@@ -5,7 +5,6 @@ public class Cube : MonoBehaviour
 {
     [SerializeField] private ColorChanger _colorChanger;
 
-    private string _planforTag = "Planform";
     private bool _hasToouchPlanform;
     private Coroutine _lifeCoroutine;
     private Rigidbody _rigidbody;
@@ -22,7 +21,7 @@ public class Cube : MonoBehaviour
         if (_hasToouchPlanform)
             return;
 
-        if (collision.gameObject.CompareTag(_planforTag))
+        if (collision.gameObject.GetComponent<Plane>())
         {
             _hasToouchPlanform = true;
 
