@@ -32,7 +32,7 @@ public class Spawner : MonoBehaviour
     private void SpawnCube()
     {
         int minValueRange = 0;
-        int indexPoint = UnityEngine.Random.Range (minValueRange, _pointsSpawn.Length);
+        int indexPoint = UnityEngine.Random.Range(minValueRange, _pointsSpawn.Length);
 
         Transform pointSpawn = _pointsSpawn[indexPoint];
 
